@@ -33,9 +33,9 @@ let guest1 = (Name: "Jan Bauer", Alter: 19)
 // Variante 1 mit IF/Else
 print(">>> Variante 1 mit IF/ELSE")
  if (guest1.Alter >= einlassAlter) && isOpen && (aktGuests < maxGuests) {
-    print("Darf rein")
+     print("Hallo \(guest1.Name), du darfst rein")
 } else {
-    print("Darf nicht rein")
+    print("Hallo \(guest1.Name), du darfst leider nicht rein.")
 }
 
 // Variante 2 mit else/if
@@ -43,15 +43,15 @@ print(">>> Variante 2 mit ELSE/IF")
 
 if isOpen {
     if aktGuests > maxGuests {
-        print("Darf nicht rein, weil zu voll!")
+        print("Hallo \(guest1.Name), es ist leider zu voll!")
     }
     else if guest1.Alter >= einlassAlter {
-        print("Darf rein")
-        } 
+        print("Hallo \(guest1.Name), du darfst rein")
+        }
     else {
-        print("Darf nicht rein, weil zu jung")
+        print("Hallo \(guest1.Name), du bist leider zu jung")
         }
 }
 else {
-    print("Niemand darf rein, weil zu!")
+    print("Hallo \(guest1.Name), heute ist der Club geschlossen!")
 }
