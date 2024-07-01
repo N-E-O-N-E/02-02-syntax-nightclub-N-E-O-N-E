@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 // 1.2. NightClub Status
 
 if isOpen {
@@ -23,21 +24,34 @@ else {
     print("Der Club ist aktuell geschlossen!")
 }
 
-// 1.3. Besucherdaten
 
-let guest1 = (Name: "Wolfgang Bauer", Alter: 61)
-let guest2 = (Name: "Maria Schmitt", Alter: 39)
-let guest3 = (Name: "Barbara Hintz", Alter: 57)
-let guest4 = (Name: "Jens Kohlmann", Alter: 54)
+// 1.3. Besucherdaten
+let guest1 = (Name: "Jan Bauer", Alter: 19)
 
 // 1.4. Einlasskontrolle
 
-if guest1.Alter >= 18 {
-    // Alter ist OK
+// Variante 1 mit IF/Else
+print(">>> Variante 1 mit IF/ELSE")
+ if (guest1.Alter >= einlassAlter) && isOpen && (aktGuests < maxGuests) {
+    print("Darf rein")
+} else {
+    print("Darf nicht rein")
+}
+
+// Variante 2 mit else/if
+print(">>> Variante 2 mit ELSE/IF")
+
+if isOpen {
+    if aktGuests > maxGuests {
+        print("Darf nicht rein, weil zu voll!")
     }
-else if (isOpen == true) && (aktGuests < maxGuests) {
-    print("Der Gast \(guest1.Name) darf in den Club")
+    else if guest1.Alter >= einlassAlter {
+        print("Darf rein")
+        } 
+    else {
+        print("Darf nicht rein, weil zu jung")
+        }
 }
 else {
-    print("Der Gast \(guest1.Name) darf nicht in den Club")
+    print("Niemand darf rein, weil zu!")
 }

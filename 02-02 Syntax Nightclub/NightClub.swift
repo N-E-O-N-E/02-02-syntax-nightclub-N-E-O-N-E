@@ -11,8 +11,8 @@ import Foundation
 var clubName: String = "NumberOneClub"
 var isOpen: Bool = true
 var maxGuests: Int = 200
-var aktGuests: Int = 167
-
+var aktGuests: Int = 190
+let einlassAlter: Int = 18
 
 
 
