@@ -8,6 +8,8 @@
 import Foundation
 
 
+ 
+ 
 // 1.2. NightClub Status
 
 if isOpen {
@@ -91,28 +93,36 @@ print("Der Club hat geschlossen!")
 
 
 
-
 // 2.3 Verlauf der Party (Advanced) + 2.4 Pausieren eines Durchlaufs
 
-/*
- Der Verlauf des Abends soll noch genauer dargestellt werden. Die aktuelle Anzahl der Gäste und die maximal Anzahl hast du bereits in einer Variablen gespeichert.
-
- Setze die Anzahl der Gäste auf einen neuen Wert (z.B: 19)
- Erstelle eine while true-Schleife, die endlos läuft.
- In jedem Durchlauf der Schleife soll:
- Wenn die Anzahl der Gäste gerade ist:
- Eine Zufallszahl zwischen 1 und 3 generiert werden.
- Die Gästeanzahl um die Zufallszahl reduziert werden. Wenn dabei ein Wert unter 0 herauskommen sollte, setze die Anzahl auf 0.
- Auf der Konsole soll ausgegeben werden, wie viele Gäste den Club verlassen haben.
- Wenn die Anzahl der Gäste ungerade ist und die aktuelle Anzahl der Gäste kleiner als die maximale Gästeanzahl:
- Erhöhe die Gästezahl um 1.
- Auf der Konsole soll ausgegeben werden, dass ein neuer Gast dazugekommen ist.
- Wenn die Anzahl der Gäste 0 erreicht, soll die Schleife mit break beendet werden und "Es haben alle Gäste die Veranstaltung verlassen." ausgegeben werden.
+var gaesteAnzahl = 19
+var gaesteGegangen = 0
+var gaesteGekommen = 0
  
- Finde eine Möglichkeit, den Programmfluss für kurze Zeit zu pausieren. So kannst du z.B. bei jedem Schleifendurchlauf eine kleine Pause einbauen und dafür sorgen, dass die Konsolenausgaben nacheinander erscheinen.
- */
-
-
-
+    while true {
+        
+        sleep(1)
+        
+        if gaesteAnzahl % 2 == 0 {
+            let zufallZahl: Int = Int.random(in: 1...3)
+            gaesteAnzahl -= zufallZahl
+            gaesteGegangen += zufallZahl
+            print("\(zufallZahl) Person(en) haben den Club verlassen!")
+        }
+        
+        if gaesteAnzahl % 2 != 0 && gaesteAnzahl < maxGuests {
+            gaesteAnzahl += 1
+            gaesteGekommen += 1
+            print("Ein neuer Gast ist eingetroffen")
+        }
+        
+        if gaesteAnzahl == 0 {
+            print("Es haben alle Gäste die Veranstaltung verlassen.")
+            print("\(gaesteGegangen) Gäste haben den Club verlassen")
+            print("\(gaesteGekommen) Gäste haben den Club besucht")
+            break
+        }
+        
+    }
 
 
