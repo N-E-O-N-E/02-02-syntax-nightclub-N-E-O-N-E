@@ -27,10 +27,13 @@ else {
 
 // 1.3. Besucherdaten
 let guest1 = (Name: "Jan Bauer", Alter: 19)
+let guest2 = (Name: "Jenniffer Schmitt", Alter: 22)
+let guest3 = (Name: "Jörg Gebert", Alter: 35)
+let guest4 = (Name: "Iris Maurer", Alter: 38)
 
 // 1.4. Einlasskontrolle
 
-// Variante 1 mit IF/Else
+// 1.4 Variante 1 mit IF/Else
 print(">>> Variante 1 mit IF/ELSE")
  if (guest1.Alter >= einlassAlter) && isOpen && (aktGuests < maxGuests) {
      print("Hallo \(guest1.Name), du darfst rein")
@@ -38,7 +41,7 @@ print(">>> Variante 1 mit IF/ELSE")
     print("Hallo \(guest1.Name), du darfst leider nicht rein.")
 }
 
-// Variante 2 mit else/if
+// 1.4 Variante 2 mit else/if
 print(">>> Variante 2 mit ELSE/IF")
 
 if isOpen {
@@ -55,3 +58,61 @@ if isOpen {
 else {
     print("Hallo \(guest1.Name), heute ist der Club geschlossen!")
 }
+
+
+// 2.1 Gäste begrüßen
+
+var durchlauf = 0
+
+while (durchlauf < aktGuests) {
+        durchlauf += 1
+        print("Lieber Gast, herzlich willkommen im Syntax Nightclub! Gast-Nr: \(durchlauf)")
+}
+print("Fertig")
+
+
+// 2.2 Verlauf der Party
+
+while aktGuests > 0 { // Solange Gäste größer 0
+    
+    print("Aktuell sind \(aktGuests) im Club!")
+    
+    let zufallZahl = Int.random(in: 1...3)
+    
+    if zufallZahl == 1 {
+        aktGuests += 1
+    }
+    if zufallZahl > 1 {
+        aktGuests -= 2
+    }
+}
+print("Es sind jetzt keine Gäste mehr im Club!")
+print("Der Club hat geschlossen!")
+
+
+
+
+// 2.3 Verlauf der Party (Advanced) + 2.4 Pausieren eines Durchlaufs
+
+/*
+ Der Verlauf des Abends soll noch genauer dargestellt werden. Die aktuelle Anzahl der Gäste und die maximal Anzahl hast du bereits in einer Variablen gespeichert.
+
+ Setze die Anzahl der Gäste auf einen neuen Wert (z.B: 19)
+ Erstelle eine while true-Schleife, die endlos läuft.
+ In jedem Durchlauf der Schleife soll:
+ Wenn die Anzahl der Gäste gerade ist:
+ Eine Zufallszahl zwischen 1 und 3 generiert werden.
+ Die Gästeanzahl um die Zufallszahl reduziert werden. Wenn dabei ein Wert unter 0 herauskommen sollte, setze die Anzahl auf 0.
+ Auf der Konsole soll ausgegeben werden, wie viele Gäste den Club verlassen haben.
+ Wenn die Anzahl der Gäste ungerade ist und die aktuelle Anzahl der Gäste kleiner als die maximale Gästeanzahl:
+ Erhöhe die Gästezahl um 1.
+ Auf der Konsole soll ausgegeben werden, dass ein neuer Gast dazugekommen ist.
+ Wenn die Anzahl der Gäste 0 erreicht, soll die Schleife mit break beendet werden und "Es haben alle Gäste die Veranstaltung verlassen." ausgegeben werden.
+ 
+ Finde eine Möglichkeit, den Programmfluss für kurze Zeit zu pausieren. So kannst du z.B. bei jedem Schleifendurchlauf eine kleine Pause einbauen und dafür sorgen, dass die Konsolenausgaben nacheinander erscheinen.
+ */
+
+
+
+
+
