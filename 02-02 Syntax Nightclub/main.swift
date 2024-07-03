@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
  
 // 1.2. NightClub Status
 print("\n----------- 1.2. NightClub Status")
@@ -199,7 +198,7 @@ while onDancefloor > 5 {
         print("Zwei Gäste verlassen die Tanzfläche")
         onDancefloor -= 2
     }
-    //sleep(1)
+    usleep(500000)
     print("Es sind aktuell \(onDancefloor) Gäste auf der Tanzfläche")
 }
 print("\n>>> Der Rausschmeißer wird gespielt! <<<")
