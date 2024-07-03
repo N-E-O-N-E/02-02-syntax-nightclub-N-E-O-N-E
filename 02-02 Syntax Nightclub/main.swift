@@ -7,10 +7,9 @@
 
 import Foundation
 
-
- 
  
 // 1.2. NightClub Status
+print("\n----------- 1.2. NightClub Status")
 
 if isOpen {
     
@@ -28,12 +27,15 @@ else {
 
 
 // 1.3. Besucherdaten
+print("\n----------- 1.3. Besucherdatene")
+
 let guest1 = (Name: "Jan Bauer", Alter: 19)
 let guest2 = (Name: "Jenniffer Schmitt", Alter: 22)
 let guest3 = (Name: "Jörg Gebert", Alter: 35)
 let guest4 = (Name: "Iris Maurer", Alter: 38)
 
 // 1.4. Einlasskontrolle
+print("\n----------- 1.4. Einlasskontrolle")
 
 // 1.4 Variante 1 mit IF/Else
 print(">>> Variante 1 mit IF/ELSE")
@@ -63,6 +65,7 @@ else {
 
 
 // 2.1 Gäste begrüßen
+print("\n----------- 2.1 Gäste begrüßen")
 
 var durchlauf = 0
 
@@ -74,6 +77,7 @@ print("Fertig")
 
 
 // 2.2 Verlauf der Party
+print("\n----------- 2.2 Verlauf der Party")
 
 while aktGuests > 0 { // Solange Gäste größer 0
     
@@ -94,6 +98,7 @@ print("Der Club hat geschlossen!")
 
 
 // 2.3 Verlauf der Party (Advanced) + 2.4 Pausieren eines Durchlaufs
+print("\n----------- 2.3 Verlauf der Party (Advanced)")
 
 var gaesteAnzahl = 19
 var gaesteGegangen = 0
@@ -101,7 +106,7 @@ var gaesteGekommen = 0
  
     while true {
         
-        sleep(1)
+       // sleep(1)
         
         if gaesteAnzahl % 2 == 0 {
             let zufallZahl: Int = Int.random(in: 1...3)
@@ -124,5 +129,84 @@ var gaesteGekommen = 0
         }
         
     }
+
+
+
+// 3.1 Cocktailzubereitung
+print("\n----------- 3.1 Cocktailzubereitung")
+
+var mitEis: Bool
+var mitAlk: Bool
+var mitFrucht: Bool
+var userAuswahl: String
+
+print("Hallo, möchtest du deinen Mojito mit Eis? (y/n)")
+userAuswahl = String(readLine()!)
+if userAuswahl == "y" {
+    print("Gerne, mit Eis!")
+    mitEis = true
+    
+} else {
+    print("Super, also ohne Eis!")
+    mitEis = false
+    
+}
+
+print("Möchtest du deinen Mojito mit Alkohol?")
+userAuswahl = String(readLine()!)
+if userAuswahl == "y" {
+    print("Ok, also mit Alkohol!")
+    mitAlk = true
+    print("Es werden 4cl Rum ins Glas gegeben")
+    
+} else {
+    print("Super, also ohne Alkohol!")
+    mitAlk = false
+    print("Es werden 4cl Limettensaft ins Glas gegeben")
+}
+print("Möchtest du Früchte in deinen Mojito? (y/n)")
+userAuswahl = String(readLine()!)
+if userAuswahl == "y" {
+    print("Es wird eine Limettenscheibe is Glas gegeben")
+    print("Es wird brauner Zucker ins Glas gegeben")
+    mitFrucht = true
+    print("Das Glas wird mit Wasser aufgefüllt.")
+} else {
+    print("Es wird nur brauner Zucker ins Glas gegeben.")
+    print("Das Glas wird mit Wasser aufgefüllt.")
+    
+}
+
+
+
+// 3.2 Aufgaben des DJs
+print("\n----------- 3.2 Aufgaben des DJs")
+
+var isParty: Bool = true
+var onDancefloor: Int = 15
+var randomInt: Int
+
+while onDancefloor > 5 {
+    
+    print("Der nächste Song wird gespielt")
+    randomInt = Int.random(in: 1...3)
+    
+    if randomInt % 2 == 0 {
+        print("Ein Gast kommt auf die Tanzfläche")
+        onDancefloor += 1
+        
+    } else {
+        print("Zwei Gäste verlassen die Tanzfläche")
+        onDancefloor -= 2
+    }
+    //sleep(1)
+    print("Es sind aktuell \(onDancefloor) Gäste auf der Tanzfläche")
+}
+print("\n>>> Der Rausschmeißer wird gespielt! <<<")
+isParty = false
+
+
+
+
 
 
