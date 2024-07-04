@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE8FA08B2C3284110069DEAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA08A2C3284110069DEAF /* main.swift */; };
 		FAD908322C32B2F700FDA6C5 /* NightClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD908312C32B2F700FDA6C5 /* NightClub.swift */; };
+		FAE982E02C36BA3E008AC463 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE982DF2C36BA3E008AC463 /* Features.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		CE8FA0872C3284110069DEAF /* 02-02 Syntax Nightclub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "02-02 Syntax Nightclub"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8FA08A2C3284110069DEAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FAD908312C32B2F700FDA6C5 /* NightClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightClub.swift; sourceTree = "<group>"; };
+		FAE982DF2C36BA3E008AC463 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				CE8FA08A2C3284110069DEAF /* main.swift */,
 				FAD908312C32B2F700FDA6C5 /* NightClub.swift */,
+				FAE982DF2C36BA3E008AC463 /* Features.swift */,
 			);
 			path = "02-02 Syntax Nightclub";
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE982E02C36BA3E008AC463 /* Features.swift in Sources */,
 				FAD908322C32B2F700FDA6C5 /* NightClub.swift in Sources */,
 				CE8FA08B2C3284110069DEAF /* main.swift in Sources */,
 			);

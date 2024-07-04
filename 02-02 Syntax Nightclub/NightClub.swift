@@ -14,7 +14,8 @@ var maxGuests: Int = 200
 var aktGuests: Int = 125
 let einlassAlter: Int = 18
 
-
+var gaesteGegangen = 0
+var gaesteGekommen = 0
 
 
 
