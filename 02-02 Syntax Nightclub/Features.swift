@@ -1,11 +1,3 @@
-//
-//  Features.swift
-//  02-02 Syntax Nightclub
-//
-//  Created by Markus Wirtz on 04.07.24.
-//
-
-import Foundation
 
 // 1.2. NightClub Status
 func nightClubStatus() {
@@ -238,4 +230,5 @@ func durchlaufAbrechnung() {
         durchlauf += 1
     }
     print("\n\nEinnahmen des Abends - Gesamt: \(String(format: "%.2f", gesamtSumme)) € \n")
+
 }

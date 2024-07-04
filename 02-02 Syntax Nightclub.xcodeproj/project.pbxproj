@@ -62,8 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				CE8FA08A2C3284110069DEAF /* main.swift */,
-				FAD908312C32B2F700FDA6C5 /* NightClub.swift */,
 				FAE982DF2C36BA3E008AC463 /* Features.swift */,
+				FAD908312C32B2F700FDA6C5 /* NightClub.swift */,
 			);
 			path = "02-02 Syntax Nightclub";
 			sourceTree = "<group>";
