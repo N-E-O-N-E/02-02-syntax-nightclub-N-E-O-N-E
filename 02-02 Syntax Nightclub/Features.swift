@@ -203,11 +203,10 @@ func aufgabenDJ() {
 
 // 4.2 Rechner für das Personal
 
-func rechnerGetraenkepreise(a: Double, b: Double) {
+func rechnerGetraenkepreise(a: Double, b: Double) -> Double {
     
     var gesamt: Double = a + b
-    //print("Das Ergbenis ist \(String(format: "%.2f", gesamt)) €")
-    
+    return gesamt
 }
 
 func durchlaufAbrechnung() {

@@ -23,6 +23,8 @@ print("\nEin Gast gibt eine Bestellung auf:")
 cocktailzubereitung()
 print("\nIm Verlauf des Abends hat der DJ immer weiter Songs gespielt bis irgendwann der Rausschmeißer gespielt wurde und die letzten Gäste gegangen sind.\n\n")
 aufgabenDJ()
+print("\nAufgabe 4.2 mit Rückgabewert\n")
+print(rechnerGetraenkepreise(a: 2.50, b: 4.80))
 print("\nAm Ende wird die Abrechnung gemacht!\n")
 durchlaufAbrechnung()
 
